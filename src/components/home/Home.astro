@@ -1,0 +1,33 @@
+---
+import IndexLayout from '../../layouts/IndexLayout.astro';
+import Header from '../Header.astro';
+import StyleLinkNavigation from '../StyleLinkNavigation.astro';
+const pages = [
+  { url: '/', title: 'Inicio' },
+  { url: '/about', title: 'Sobre OneSoftNow' },
+  { url: '/services', title: 'Servicios' },
+  { url: '/products', title: 'Productos' },
+  { url: '/portafolio', title: 'Portafolio' },
+  { url: '/blog', title: 'Blog' },
+  { url: '/contact', title: 'Contacto' },
+];
+---
+
+<Header
+  bigText="Bienvenid@ a"
+  altImg="logo-onesoftnow"
+  title="OneSoftNow"
+  urlImg={'sourcesEnterprise/solologo.png'}
+  description={'Somos la mejor empresa de desarrollo y gestion de negocios digitales'}
+/>
+<section class="mx-auto">
+  <div
+    class="sm:flex py-12 flex-1 lg:py-18 flex justify-around flex-wrap sm:flex-row gap-5 mt-5 space-x-1"
+  >
+    {
+      pages.map((page) => (
+        <StyleLinkNavigation navLinkUrl={page.url} navLinkText={page.title} />
+      ))
+    }
+  </div>
+</section>
