@@ -2,27 +2,97 @@
 const today = new Date();
 ---
 
-<footer>
-  &copy; {today.getFullYear()} OneSoftNow. Todos los derechos reservados.
+<footer
+  class="container mx-auto footer cursor-default overflow-hidden w-full text-white sm:px-5 px-8 flex flex-col justify-between"
+>
+  <article
+    class="font-semibold text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-10% via-primary via-25% to-green-600 flex sm:flex-nowrap flex-wrap justify-between"
+  >
+    <div class="">
+      <div class="flex justify-start gap-5">
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/alexander-mu%C3%B1oz-4959a0255/"
+          ><img
+            class="w-10"
+            src="/LogosPack/Facebook_Logo_Primary.png"
+            alt="iconoyoutube"
+          /></a
+        >
+        <a target="_blank" href="https://github.com/MINOTAURO18"
+          ><img
+            class="w-10"
+            src="/LogosPack/Instagram_Glyph_Gradient.png"
+            alt="iconokick"
+          /></a
+        >
+        <a target="_blank" href="https://github.com/MINOTAURO18"
+          ><img
+            class="w-24"
+            src="/LogosPack/LinkedIn-Blue-14@2x.png"
+            alt="linkedingLogo"
+          /></a
+        >
+      </div>
+      <div class="flex-col sm:mb-0 mb-6">
+        <span class="font-semibold"
+          >&copy; {today.getFullYear()} OneSoftNow. Todos los derechos reservados.</span
+        >
+      </div>
+    </div>
+    <div class="flex justify-center flex-col sm:mb-0 mb-6">
+      <h3
+        class="font-semibold text-transparent sm:w-full bg-clip-text bg-gradient-to-br from-indigo-600 from-10% via-primary via-30% to-green-600"
+      >
+        Siéntete libre de intentarlo, con perseverancia y determinación tendras
+        éxito.
+      </h3>
+    </div>
+    <div class="flex justify-center flex-col">
+      <a
+        class="font-semibold text-purple-800"
+        target="_blank"
+        href="https://github.com/MINOTAURO18"
+        >Desarrollado x Joselin Alfaro Olmos - ceo OneSoftNow</a
+      >
+    </div>
+  </article>
 </footer>
+
 <style>
-  footer {
-    padding: 2em 6em 1em;
-    background: linear-gradient(var(--gray-gradient)) no-repeat;
-    color: rgb(var(--gray));
-    text-align: center;
+  .footer {
+    flex-shrink: 0;
+    position: relative;
+    min-height: 5vh;
+    backdrop-filter: blur(0px) saturate(100%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
   }
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    margin-top: 1em;
+
+  span.item {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 120px;
+    height: 120px;
+    transform: rotate(50deg) skewX(-12deg);
+    border-radius: 3rem;
+    background-color: #008697;
+    filter: blur(3rem);
+    opacity: 0.8;
+    display: none;
   }
-  .social-links a {
-    text-decoration: none;
-    color: rgb(var(--gray));
+
+  @media (width > 400px) {
+    span.item {
+      right: 100px;
+      opacity: 0.8;
+      display: block;
+    }
   }
-  .social-links a:hover {
-    color: rgb(var(--gray-dark));
+
+  @media (width < 600px) {
+    .footer {
+      padding: 10vh 8%;
+    }
   }
 </style>

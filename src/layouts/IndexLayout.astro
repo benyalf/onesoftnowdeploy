@@ -15,7 +15,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
     <NavBar />
 
     <slot />
-
-    <Footer />
+    <div class="relative flex-shrink-0 sm:bottom-0 w-full sm:fixed">
+      <Footer />
+    </div>
   </body>
 </html>
