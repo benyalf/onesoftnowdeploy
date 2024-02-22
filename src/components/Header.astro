@@ -13,7 +13,7 @@ const { urlImg, title, altImg, description, bigText } = Astro.props;
 <header class="mx-auto max-w-xl text-center">
   <h1 class="prose sm:mt-20 mt-5 text-5xl">{bigText} {title}</h1>
 
-  <img class="sm:p-5 p-3 mx-auto w-1/2" src={urlImg} alt={altImg} />
+  <img class="sm:p-5 p-3 mx-auto sm:w-1/2 w-full" src={urlImg} alt={altImg} />
   <h2
     data-test="header-description"
     class="prose-stone prose-sm md:prose-lg lg:prose-xl sm:prose-2xl"
