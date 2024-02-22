@@ -1,0 +1,7 @@
+---
+const props = Astro.props;
+---
+
+<li class="no-underline  flex justify-center hover:underline">
+  <a class="m-2" href={props.navLinkUrl}>{props.navLinkText}</a>
+</li>
