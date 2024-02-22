@@ -1,8 +1,7 @@
 ---
-import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 
-import Hamburger from '../components/Hamburger.astro';
+import Hamburger from './Hamburger.astro';
 import Navigation from './StyleLinkNavigation.astro';
 
 const pages = [
@@ -31,11 +30,7 @@ const pages = [
         >
           {
             pages.map((page) => (
-              <Navigation
-                key={page.url}
-                navLinkUrl={page.url}
-                navLinkText={page.title}
-              />
+              <Navigation navLinkUrl={page.url} navLinkText={page.title} />
             ))
           }
         </ul>

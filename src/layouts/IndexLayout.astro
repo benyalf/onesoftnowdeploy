@@ -1,17 +1,21 @@
 ---
-import IndexLayout from '../layouts/IndexLayout.astro';
+import Footer from '../components/Footer.astro';
+import NavBar from '../components/NavBar.astro';
 import BaseHead from '../components/BaseHead.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>  
+  <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body>
-    <IndexLayout>
-      <main></main>
-    </IndexLayout>
+
+  <body class="h-screen text-left flex flex-col">
+    <NavBar />
+
+    <slot />
+
+    <Footer />
   </body>
 </html>
