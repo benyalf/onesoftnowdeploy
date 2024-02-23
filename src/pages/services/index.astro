@@ -6,7 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 
-const blog = (await getCollection('posts')).sort(
+const services = (await getCollection('services')).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
 );
 ---
@@ -91,19 +91,19 @@ const blog = (await getCollection('posts')).sort(
       <section>
         <ul>
           {
-            blog.map((blog) => (
+            services.map((service) => (
               <li>
-                <a href={`/blog/${blog.slug}/`}>
+                <a href={`/services/${service.slug}/`}>
                   <img
                     width={720}
                     loading="lazy"
                     height={360}
-                    src={blog.data.heroImage}
+                    src={service.data.heroImage}
                     alt=""
                   />
-                  <h4 class="title">{blog.data.title}</h4>
+                  <h4 class="title">{service.data.title}</h4>
                   <p class="date">
-                    <FormattedDate date={blog.data.pubDate} />
+                    <FormattedDate date={service.data.pubDate} />
                   </p>
                 </a>
               </li>
