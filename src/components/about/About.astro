@@ -1,0 +1,23 @@
+---
+import Header from '../Header.astro';
+import Presentation from './PresentationSection.astro';
+import About from './AboutusSection .astro';
+import VideoSection from './VideoSection.astro';
+import TrustSection from './TrustSection.astro';
+import ContactSection from '../contact/Contact.astro';
+const bigText = 'Conoce más sobre';
+const title = 'OneSoftNow';
+
+const urlImg =
+  'https://www.imgacademy.com/sites/default/files/styles/scale_2500w/public/new-dorm-aerial1.jpg?itok=AMZbUIkD';
+---
+
+<Header bigText={bigText} title={title} />
+<Presentation />
+<About imgUrl={urlImg} />
+<VideoSection
+  iframeUrl="https://www.youtube.com/embed/Ip12wf1WAqY?si=l5pvpb02D6cohkgU"
+  urlPost="/blog"
+/>
+<TrustSection />
+<ContactSection />

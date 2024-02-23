@@ -1,0 +1,64 @@
+---
+const { iframeUrl, urlPost } = Astro.props;
+---
+
+<section class="text-gray-600 body-font">
+  <div class="mx-auto max-w-screen-xl px-4 md:px-8">
+    <h2
+      class="text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl"
+    >
+      OneSoftNow La Mejor Compañia Para Tu Empresa
+    </h2>
+    <div class="container px-5 pb-24 mx-auto flex flex-wrap">
+      <div
+        class="sm:text-3xl text-2xl text-gray-900 font-medium title-font mb-2 md:w-2/5"
+      >
+        <iframe
+          class="sm:w-[450px] w-full md:w-full h-[315px]"
+          src={iframeUrl}
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <div class="md:w-3/5 md:pl-6">
+        <p class="leading-relaxed text-base">
+          En la era actual, la presencia digital es esencial para el éxito
+          empresarial. Muchas empresas enfrentan desafíos al intentar establecer
+          y mantener una fuerte presencia en línea. Onesoftnow aborda este
+          problema al proporcionar soluciones digitales efectivas y adaptadas a
+          las necesidades específicas de cada cliente, permitiéndoles destacar
+          en un mercado cada vez más competitivo.
+          <br /><br />
+          OneSoftNow es la mejor compañia para tu empresa por que somos un equipo
+          de personas trabajadoras que estan comprometidas firmemente con en el exito
+          de su Empresa,por que el exito suyo es el exito nuestro, siempre de la
+          mano de usted y mostrandole las mejores soluciones
+        </p>
+        <div class="flex md:mt-4 mt-6">
+          <a
+            href="/contact"
+            class="inline-flex text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded"
+            >Contactanos</a
+          >
+          <a
+            href={urlPost}
+            class="text-indigo-500 inline-flex items-center ml-4"
+            >La importancia de la presencia digital para tu Empresa
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-4 h-4 ml-2"
+              viewBox="0 0 24 24"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

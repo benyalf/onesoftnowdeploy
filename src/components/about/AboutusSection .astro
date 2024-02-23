@@ -1,0 +1,65 @@
+---
+const { imgUrl } = Astro.props;
+---
+
+<div class="bg-white py-6 sm:py-8 lg:py-12">
+  <div class="mx-auto max-w-screen-xl px-4 md:px-8">
+    <!-- text - start -->
+    <div class="mb-10 md:mb-16">
+      <h2
+        class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl"
+      >
+        Nuestros valores empresariales
+      </h2>
+    </div>
+    <!-- text - end -->
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-0 md:divide-x">
+      <!-- stat - start -->
+      <div class="flex flex-col items-center md:p-4">
+        <div class="text-xl font-bold text-indigo-500 sm:text-2xl md:text-3xl">
+          Misión
+        </div>
+        <div class="text-sm font-semibold sm:text-base">
+          <p class="mt-4 mb-4">
+            En Onesoftnow, nos comprometemos a brindar servicios de alta calidad
+            a nuestros clientes y futuros clientes.
+            <br /><br />
+            Nuestra misión es proporcionar un catálogo amplio y accesible, diseñado
+            para implementar soluciones efectivas en negocios y empresas que buscan
+            potenciar el crecimiento de su marca y presencia en línea. Estamos dedicados
+            a mejorar el rendimiento de cada negocio o empresa con enfoque y experiencia,
+            garantizando un impacto positivo y duradero en su éxito.
+          </p>
+        </div>
+      </div>
+      <!-- stat - end -->
+
+      <!-- stat - start -->
+      <div class="flex flex-col items-center md:p-4">
+        <img
+          src={imgUrl}
+          loading="lazy"
+          alt="Photo by Martin Sanchez"
+          class="h-full w-full object-cover object-center"
+        />
+      </div>
+
+      <!-- stat - start -->
+      <div class="flex flex-col items-center md:p-4">
+        <div class="text-xl font-bold text-indigo-500 sm:text-2xl md:text-3xl">
+          Visión
+        </div>
+        <div class="mt-4 mb-4 text-sm font-semibold sm:text-base">
+          En Onesoftnow, aspiramos a liderar el camino en el desarrollo digital
+          de Aguazul, Casanare, ofreciendo soluciones innovadoras para el éxito
+          digital de negocios locales. Nuestra visión es clara: queremos ser tu
+          aliado para llevar tu negocio a la cima en el mundo digital. Nos
+          enfocamos en simplificar el camino hacia el éxito implementando
+          procesos y soluciones digitales de manera eficiente.
+        </div>
+      </div>
+      <!-- stat - end -->
+    </div>
+  </div>
+</div>
