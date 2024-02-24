@@ -13,6 +13,13 @@ const services = (await getCollection('services')).sort(
     <p class="flex justify-center mb-8 text-5xl font-medium">
       Descubre nuestros {title}
     </p>
+    <p class="flex justify-center text-center">
+      Bienvenidos a nuestra sección de servicios, aquí encontrara cada uno de
+      nuestro servicios en especifico donde le proporcionaremos información
+      clara sobre el porque implementar estos servicios con nosotros podrían ser
+      determinantes para el éxito de su empresa o negocio.
+    </p>
+
     <ul class="list-none">
       {
         services.map((service) => (
